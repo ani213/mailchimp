@@ -23,7 +23,7 @@ func main() {
 	workerCount := 5
 	for i := 1; i <= workerCount; i++ {
 		wg.Add(1)
-		go emailWorker(i, reciientChannel, &wg)
+		go emailWorker(int32(i), reciientChannel, &wg)
 	}
 	wg.Wait()
 }

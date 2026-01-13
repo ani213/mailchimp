@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func emailWorker(id int, ch chan Recipient, wg *sync.WaitGroup) {
+func emailWorker(id int32, ch chan Recipient, wg *sync.WaitGroup) {
 	defer wg.Done()
 	for recipient := range ch {
 		smtpHost := "localhost"
