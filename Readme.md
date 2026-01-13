@@ -8,3 +8,6 @@ docker run -d \
 
 # mailpit UI
 http://localhost:8025/
+
+# run code 
+go run .
